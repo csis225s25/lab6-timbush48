@@ -20,6 +20,7 @@ class GraphicsPanel extends JPanel {
         // first, we should call the paintComponent method we are
         // overriding in JPanel
         super.paintComponent(g);
+        g.setFont(new Font("Serif", Font.PLAIN, 30));
         FontMetrics m  = g.getFontMetrics(g.getFont());
         int width = m.stringWidth(s);
         int sAscent = m.getAscent();
@@ -29,6 +30,7 @@ class GraphicsPanel extends JPanel {
         // the Graphics object passed to this method has many methods
         // we can use to draw in the area of the panel, one of which
         // allows us to draw a String at a given x,y position
+        
         g.drawString(s, x, y);
     }
 }
